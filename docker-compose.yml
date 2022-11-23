@@ -1,0 +1,39 @@
+version: '3'
+services:
+  node-backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+      - "9229:9229"
+    volumes:
+      - "./backend:/app"
+
+  mongodb:
+    image:  mongo:latest
+    container_name: containerized-mongo-database
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - host-mongo-data:/data/db
+      - host-mongo-data-config:/data/configdb
+
+  mongo-express:
+    image: mongo-express:latest
+    restart: always
+    container_name: containerized-mongo-express-server
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+    depends_on:
+      - mongodb
+
+volumes:
+  host-mongo-data:
+  host-mongo-data-config:
+
