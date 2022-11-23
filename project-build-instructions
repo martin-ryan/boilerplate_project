@@ -1,0 +1,13 @@
+DevOps Setup:
+dockerfile for custom images to build a container from
+docker-compose.yml for a single location/command to run or tear down entire project
+
+Server Appplication:
+docker-compose, use mounted volume from local host dev directory to 
+
+Database
+docker-compose, use named volume for database
+
+Client Application:
+npx create-react-app <target dir> --template typescript
+
