@@ -1,13 +1,31 @@
 DevOps Setup:
-dockerfile for custom images to build a container from
+dockerfile build custom images for container instances
 docker-compose.yml for a single location/command to run or tear down entire project
+    docker compose up
+    docker compose down
+    docker compose start
 
-Server Appplication:
+Server Application:
+npm --init
+git --init
 docker-compose, use mounted volume from local host dev directory to 
 
 Database
 docker-compose, use named volume for database
 
 Client Application:
+npm --init
+git --init
 npx create-react-app <target dir> --template typescript
 
+-prettier
+-eslint
+
+nodemon server.js (ex)
+npm start (in frontend folder)
+
+
+Server Application:
+npm install --save-dev typescript @types/node @types/express
+npx tsc --init #create tsconfig.json with minimal necessary options - specify rootdir and outdir
+npx tsc --watch
