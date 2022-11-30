@@ -1,0 +1,6 @@
+{
+  "languages": {
+    "frontend/client": "javascript-react",
+    "backend/server": "javascript-node"
+  }
+}

@@ -1,3 +1,15 @@
+developement environment:
+windows with Windows Subsystem Linux
+WSL installed Ubuntu where I install vscode extensions
+install git for windows to manage security seemlessly through vscode and git project management
+install docker desktop for windows
+
+vscode:
+local/windows (not WSL) install Remote Development extensions
+install Docker extension in WSL (not windows)
+install Prettier extension in WSL
+2077 cyberpunk theme
+
 DevOps Setup:
 dockerfile build custom images for container instances
 docker-compose.yml for a single location/command to run or tear down entire project
